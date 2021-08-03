@@ -8,7 +8,7 @@ function Level ({level, guess }) {
    
 
     const [array, setArray] = useState([])
-    const [tour, setTour] = useState(1)    
+    const [tour, setTour] = useState(0)    
     const[win, setWin] = useState(false)
     const input = useRef(null);
     
@@ -51,11 +51,16 @@ function Level ({level, guess }) {
         }
     }
   
+    function getNote(tour) {
+        if(tour === 1 ){return 20}if(tour === 2 ) {return 18}if(tour === 3 ) {return 16}if(tour === 4 ) {return 14}if(tour === 5 ) {return 12}if(tour === 6 ) {return 10}if(tour === 7 ) {return 8}if(tour === 8 ) {return 6}if(tour === 9 ) {return 4}if(tour ===10){return 2}
+    }
 
-    if(win)
-    {
+
+    if(win){
+        let note = getNote(tour)
         return (
-            <h1>Félicitation vous avez déchiffré le code ! </h1>
+            <h1>Félicitation vous avez déchiffré le code ! <br/>
+            Vous avez obtenu {note} / 20</h1>
         )
     }
 
