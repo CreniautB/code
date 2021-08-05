@@ -76,7 +76,7 @@ function Level ({level, guess }) {
 
             <h1>Déchiffrer le code à {level} chiffre</h1>
 
-            <h2>Essai {tour} / 10</h2>
+            <h2 className="tourCount">Essai {tour} / 10</h2>
 
             <div className="inputContainer" >
                 <input ref={input} onKeyPress={(e) => handleKeyPress(e)} /><br/>
