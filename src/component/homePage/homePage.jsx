@@ -26,7 +26,7 @@ function HomePage() {
       <div className="homePage">
         
            <h1 className="button titleGame">
-               Jeux du Code Secret<br/>
+               Jeu du Code Secret<br/>
            </h1>
 
            <h2 className="regle">
