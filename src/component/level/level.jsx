@@ -4,7 +4,7 @@ import _ from 'lodash'
 import Square from '../square/square'
 import getAllIndexes from './getAllIndexes'
 
-function Level ({level, guess }) {
+function Level ({level, guess, stopClock }) {
    
 
     const [array, setArray] = useState([])
@@ -58,13 +58,16 @@ function Level ({level, guess }) {
 
     if(win){
         let note = getNote(tour)
+        stopClock.current.click()
         return (
             <h1>Félicitation vous avez déchiffré le code ! <br/>
             Vous avez obtenu {note} / 20</h1>
         )
     }
 
-    if(tour === 11) {
+    if(tour === 10) {
+        
+        stopClock.current.click()
         return (
             <h1>Vous n'avez pas réussi à déchiffrer le code<br/>
             Qui était : <strong className="code">{guess}</strong></h1>

@@ -1,11 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import Level from '../level/level'
 import './homePage.css'
 import generate from './generate'
+import Timer from 'react-compound-timer'
 
 
 function HomePage() {
 
+    const stopClock = useRef(null)
     const [level, setLevel] = useState(false)
     
     function selectLevel(id) {
@@ -17,7 +19,29 @@ function HomePage() {
         const guessString = generate(level)
         const guess = guessString.split('')
         return (
-            <Level  level={level} guess={guess} />
+            <>
+            <div className="button timer">
+
+            <span>Votre Chrono</span>
+
+            <Timer
+                initialTime={0}
+            >
+                {({stop }) => (
+                    <React.Fragment>
+                        <div>
+                            <Timer.Minutes /> : <Timer.Seconds /> 
+                        </div>
+                        <div>
+                            <button className="btnHidden" ref={stopClock} onClick={stop}>Stop</button>
+                        </div>
+                    </React.Fragment>
+                )}
+            </Timer>
+          </div> 
+
+            <Level  level={level} guess={guess} stopClock={stopClock} />
+            </>
         ) 
     }
 

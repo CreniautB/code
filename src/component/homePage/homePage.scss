@@ -54,3 +54,19 @@ body{
 .vert{
     color: green;
 }
+
+.timer{
+    width: 150px;
+    margin: auto!important;
+    padding: 0.2em!important;
+    margin-top: 1em!important;
+    letter-spacing: 0.1em;
+    font-size: 18px!important;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.btnHidden{
+    display: none;
+}
