@@ -20,6 +20,7 @@ function HomePage() {
         const guess = guessString.split('')
         return (
             <>
+            
             <div className="button timer">
 
             <span>Votre Chrono</span>
@@ -48,7 +49,7 @@ function HomePage() {
 
     return (
       <div className="homePage">
-        
+          <br/>
            <h1 className="button titleGame">
                Jeu du Code Secret<br/>
            </h1>

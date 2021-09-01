@@ -34,7 +34,20 @@ body{
     font-size: 19px;
     border: 1px solid rgb(0, 92, 25);
 }
-
+.buttonLink {
+    list-style: none;
+    background-color: $greenColor;
+    padding: 10px;
+    border-radius: 5px;
+    color: White;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    letter-spacing: 0.80px;
+    border: 1px solid rgb(0, 92, 25);
+}
 .titleGame{
     max-width: 350px;
     margin: auto;
@@ -59,7 +72,7 @@ body{
     width: 150px;
     margin: auto!important;
     padding: 0.2em!important;
-    margin-top: 1em!important;
+    margin-top: 1.5em!important;
     letter-spacing: 0.1em;
     font-size: 18px!important;
 

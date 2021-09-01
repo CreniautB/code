@@ -77,7 +77,7 @@ function Level ({level, guess, stopClock }) {
     return(
         <div className='level'>
 
-            <h1>Déchiffrer le code à {level} chiffre</h1>
+            <h1>Déchiffrer le code à {level} chiffres</h1>
 
             <h2 className="tourCount">Essai {tour} / 10</h2>
 
